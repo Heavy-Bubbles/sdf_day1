@@ -78,6 +78,44 @@ public class App
             System.out.println("You are an adult.");
         }
 
+        //Slide 21
+        Integer i = 0;
+        input = con.readLine("Type a phrase");
+
+        while (i < input.length()) {
+            // do/process something here
+            // e.g. Clementi --> Begin index = 0, C
+            //End index - will increease based on 'i'
+            //substring (beginIndex, endIndex)
+            System.out.println(input.substring(0, i));
+            //i++ --> i = i + 1 (increment by 1)
+            //i = i + n where n is how much u wanna increment
+            i++;
+        }
+
+        for (int idx=0; idx <  input.length(); idx++) {
+            System.out.println(input.substring(0, i));
+        }
+
+        //Slide 23
+        String [] toDo = new String [5];
+
+        for (int pos = 0; pos < toDo.length; pos++){
+            input = con.readLine("Enter to do task" + (pos + 1) +": ");
+            toDo[pos] = input;
+        }
+
+        for (int pos = 0; pos < toDo.length; pos++){
+            System.out.println("Task " + (pos + 1) + ": " + toDo[pos]);
+        }
+        
+        //Slide 24
+        String strName = "NUS";
+
+        if (args.length > 0){
+            strName = args[0];
+        }
+
         } else {
         System.err.println("You have not told me your name!");
         }
